@@ -1,0 +1,13 @@
+[workspace]
+members = ["audio_kernel"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+onnxruntime = "0.10"  # For GLM-ASR-Nano offline
+vibevoice = { git = "https://github.com/danielclough/vibevoice-rs" }
+tauri = "1.7"
+flutter_rust_bridge = "2.0"
+cpal = "0.15"
+rubato = "0.14"
+vad-rs = "0.1"
+chatterbox = { git = "https://github.com/resemble-ai/chatterbox" }  # If Rust port; else PyO3 call

@@ -1,0 +1,18 @@
+[package]
+name = "goeckoh_audio_kernel"
+version = "0.2.0"  # Updated
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+onnxruntime = "0.10"  # Offline GLM-ASR, CosyVoice
+vibevoice = { git = "https://github.com/danielclough/vibevoice-rs" }
+flutter_rust_bridge = "2.0"
+cpal = "0.15"
+rubato = "0.14"
+vad-rs = "0.1"
+ndarray = "0.15"  # For Wiener/PSD
+rustfft = "6.2"  # FFT for noise reduction
